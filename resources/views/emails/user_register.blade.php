@@ -1,0 +1,1 @@
+selamat bergabung {{ $user->name }}
