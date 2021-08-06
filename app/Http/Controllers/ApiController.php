@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 class ApiController extends Controller
 {
+<<<<<<< HEAD
+    public function bootstrapTableFormat($query, $request){
+        $modelQueryData1 = $query;
+=======
     public function bootstrapTableFormat($query, $request)
     {
         $modelQueryData2 = $query;
+>>>>>>> master
         $modelQueryCount = $query;
 
         $limit = isset($request->limit) ? $request->limit : 10;
@@ -16,7 +21,11 @@ class ApiController extends Controller
 
         $response = [
             'total' => $modelQueryCount->count(),
+<<<<<<< HEAD
+            'rows'  => $modelQueryData1->offset($offset)->limit($limit)->orderBy($sort, $order)->get(),
+=======
             'rows'  => $modelQueryData2->offset($offset)->limit($limit)->orderBy($sort, $order)->get(),
+>>>>>>> master
         ];
 
         return $response;
